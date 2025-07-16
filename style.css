@@ -1,0 +1,548 @@
+/* 전체 페이지 기본 설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 웹폰트 설정 (넥슨폰트 대신 비슷한 한국어 폰트) */
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: white;
+    color: #333;
+}
+
+/* 헤더 기본 스타일 */
+.header {
+    /* 헤더 배경색을 흰색으로 설정 */
+    background-color: white;
+    /* 가로로 나란히 배치하기 위해 flex 사용 */
+    display: flex;
+    /* 세로 가운데 정렬 */
+    align-items: center;
+    /* 양쪽 끝과 가운데로 배치 */
+    justify-content: space-between;
+    /* 각 요소 사이의 간격을 10px로 설정 */
+    gap: 10px;
+    /* 헤더 안쪽 여백 */
+    padding: 15px 30px;
+    /* 헤더 아래쪽에 그림자 추가 */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* 모바일과 웹에서 모두 보이게 하기 위한 최소 높이 */
+    min-height: 70px;
+    /* 헤더를 다른 요소 위에 표시 */
+    position: relative;
+    z-index: 1000;
+}
+
+/* 로고 섹션 스타일 (로고 + 브랜드 이름) */
+.logo-section {
+    /* 로고와 브랜드 이름을 가로로 나란히 배치 */
+    display: flex;
+    /* 세로 가운데 정렬 */
+    align-items: center;
+    /* 로고와 브랜드 이름 사이 간격 */
+    gap: 15px;
+}
+
+/* 로고 이미지 스타일 */
+.logo {
+    /* 로고 높이 설정 */
+    height: 40px;
+    /* 비율 맞춤 */
+    width: auto;
+    /* 로고가 깨지지 않게 보호 */
+    object-fit: contain;
+}
+
+/* 브랜드 이름 스타일 */
+.brand-name {
+    /* 글자 크기 */
+    font-size: 24px;
+    /* 글자 두께 */
+    font-weight: 700;
+    /* 글자 색상 */
+    color: #333;
+    /* 기본 마진 제거 */
+    margin: 0;
+}
+
+/* 메뉴 네비게이션 스타일 */
+.nav-menu {
+    /* 메뉴 항목들을 가로로 나란히 배치 */
+    display: flex;
+    /* 세로 가운데 정렬 */
+    align-items: center;
+    /* 메뉴 항목들 사이 간격 */
+    gap: 30px;
+}
+
+/* 메뉴 항목 스타일 */
+.menu-item {
+    /* 글자 색상 */
+    color: #333;
+    /* 밑줄 제거 */
+    text-decoration: none;
+    /* 글자 크기 */
+    font-size: 16px;
+    /* 글자 두께 */
+    font-weight: 500;
+    /* 마우스 올렸을 때 손가락 모양 */
+    cursor: pointer;
+    /* 색상 변화 애니메이션 */
+    transition: color 0.3s ease;
+}
+
+/* 메뉴 항목에 마우스 올렸을 때 */
+.menu-item:hover {
+    /* 글자 색상 변경 */
+    color: #007bff;
+}
+
+/* 로그인 버튼 스타일 */
+.login-btn {
+    /* 흰색 배경 */
+    background-color: white;
+    /* 검은색 테두리 */
+    border: 2px solid #333;
+    /* 둥근 모서리 (radius 25) */
+    border-radius: 25px;
+    /* 글자 색상 */
+    color: #333;
+    /* 글자 크기 */
+    font-size: 16px;
+    /* 글자 두께 */
+    font-weight: 500;
+    /* 버튼 안쪽 여백 */
+    padding: 10px 25px;
+    /* 마우스 올렸을 때 손가락 모양 */
+    cursor: pointer;
+    /* 색상 변화 애니메이션 */
+    transition: all 0.3s ease;
+    /* 기본 테두리 스타일 제거 */
+    outline: none;
+    /* 폰트 상속 */
+    font-family: inherit;
+}
+
+/* 로그인 버튼에 마우스 올렸을 때 */
+.login-btn:hover {
+    /* 배경색 변경 */
+    background-color: #333;
+    /* 글자 색상 변경 */
+    color: white;
+}
+
+/* 히어로 섹션 기본 스타일 */
+.hero {
+    /* 화면 전체 높이로 설정 */
+    height: 100vh;
+    /* 화면 전체 너비로 설정 */
+    width: 100%;
+    /* 상대적 위치 설정 (화살표 버튼 배치용) */
+    position: relative;
+    /* 넘치는 내용 숨기기 */
+    overflow: hidden;
+}
+
+/* 히어로 캐러셀 컨테이너 스타일 */
+.hero-carousel {
+    /* 화면 전체 높이와 너비 */
+    height: 100%;
+    width: 100%;
+    /* 상대적 위치 설정 */
+    position: relative;
+}
+
+/* 히어로 슬라이드 기본 스타일 */
+.hero-slide {
+    /* 화면 전체 높이와 너비 */
+    height: 100%;
+    width: 100%;
+    /* 절대 위치로 모든 슬라이드를 같은 자리에 배치 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* 배경 이미지 설정 */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* 슬라이드 내용을 가운데 정렬 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* 처음에는 투명하게 숨기기 */
+    opacity: 0;
+    /* 슬라이드 전환 애니메이션 */
+    transition: opacity 1s ease-in-out;
+}
+
+/* 활성화된 슬라이드만 보이게 하기 */
+.hero-slide.active {
+    opacity: 1;
+}
+
+/* 히어로 콘텐츠 스타일 */
+.hero-content {
+    /* 텍스트 가운데 정렬 */
+    text-align: center;
+    /* 글자 색상을 흰색으로 설정 */
+    color: white;
+    /* 최대 너비 설정 */
+    max-width: 800px;
+    /* 좌우 여백 자동 (가운데 정렬) */
+    margin: 0 auto;
+    /* 안쪽 여백 */
+    padding: 40px 20px;
+}
+
+/* 히어로 브랜드 이름 스타일 (큰 글씨) */
+.hero-brand {
+    /* 글자 크기를 크게 설정 */
+    font-size: 48px;
+    /* 글자 두께 */
+    font-weight: 700;
+    /* 아래쪽 여백 */
+    margin-bottom: 20px;
+    /* 글자 그림자 추가 (배경과 대비) */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* 히어로 제목 스타일 */
+.hero-title {
+    /* 글자 크기 */
+    font-size: 36px;
+    /* 글자 두께 */
+    font-weight: 600;
+    /* 아래쪽 여백 */
+    margin-bottom: 20px;
+    /* 글자 그림자 추가 (배경과 대비) */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* 히어로 설명 스타일 */
+.hero-description {
+    /* 글자 크기 */
+    font-size: 20px;
+    /* 글자 두께 */
+    font-weight: 400;
+    /* 아래쪽 여백 */
+    margin-bottom: 40px;
+    /* 줄 간격 */
+    line-height: 1.6;
+    /* 글자 그림자 추가 (배경과 대비) */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+/* 히어로 구매하기 버튼 스타일 */
+.hero-btn {
+    /* 배경색 */
+    background-color: #007bff;
+    /* 글자 색상 */
+    color: white;
+    /* 테두리 없음 */
+    border: none;
+    /* 둥근 모서리 */
+    border-radius: 30px;
+    /* 글자 크기 */
+    font-size: 18px;
+    /* 글자 두께 */
+    font-weight: 600;
+    /* 버튼 안쪽 여백 */
+    padding: 15px 40px;
+    /* 마우스 올렸을 때 손가락 모양 */
+    cursor: pointer;
+    /* 색상 변화 애니메이션 */
+    transition: all 0.3s ease;
+    /* 폰트 상속 */
+    font-family: inherit;
+    /* 버튼 그림자 추가 */
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+/* 히어로 버튼에 마우스 올렸을 때 */
+.hero-btn:hover {
+    /* 배경색 변경 */
+    background-color: #0056b3;
+    /* 버튼을 살짝 위로 올리기 */
+    transform: translateY(-2px);
+    /* 그림자 더 진하게 */
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+}
+
+/* 히어로 화살표 버튼 기본 스타일 */
+.hero-arrow {
+    /* 절대 위치 설정 */
+    position: absolute;
+    /* 세로 가운데 정렬 */
+    top: 50%;
+    transform: translateY(-50%);
+    /* 배경색 투명 */
+    background-color: transparent;
+    /* 테두리 없음 */
+    border: none;
+    /* 글자 색상 흰색 */
+    color: white;
+    /* 글자 크기 */
+    font-size: 30px;
+    /* 글자 두께 */
+    font-weight: bold;
+    /* 버튼 크기 */
+    width: 60px;
+    height: 60px;
+    /* 둥근 모서리 */
+    border-radius: 50%;
+    /* 마우스 올렸을 때 손가락 모양 */
+    cursor: pointer;
+    /* 색상 변화 애니메이션 */
+    transition: all 0.3s ease;
+    /* 다른 요소 위에 표시 */
+    z-index: 100;
+    /* 텍스트 가운데 정렬 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 왼쪽 화살표 위치 */
+.hero-arrow-left {
+    left: 30px;
+}
+
+/* 오른쪽 화살표 위치 */
+.hero-arrow-right {
+    right: 30px;
+}
+
+/* 화살표 버튼에 마우스 올렸을 때 */
+.hero-arrow:hover {
+    /* 배경색 추가 */
+    background-color: rgba(255, 255, 255, 0.2);
+    /* 크기 살짝 키우기 */
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* 슬라이드 인디케이터 컨테이너 스타일 */
+.hero-indicators {
+    /* 절대 위치 설정 */
+    position: absolute;
+    /* 아래쪽 중앙에 배치 */
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* 가로로 나란히 배치 */
+    display: flex;
+    /* 간격 설정 */
+    gap: 15px;
+    /* 다른 요소 위에 표시 */
+    z-index: 100;
+}
+
+/* 개별 인디케이터 스타일 */
+.indicator {
+    /* 크기 설정 */
+    width: 12px;
+    height: 12px;
+    /* 둥근 모양 */
+    border-radius: 50%;
+    /* 기본 배경색 (투명한 흰색) */
+    background-color: rgba(255, 255, 255, 0.5);
+    /* 마우스 올렸을 때 손가락 모양 */
+    cursor: pointer;
+    /* 색상 변화 애니메이션 */
+    transition: background-color 0.3s ease;
+}
+
+/* 활성화된 인디케이터 스타일 */
+.indicator.active {
+    /* 배경색 흰색으로 변경 */
+    background-color: white;
+}
+
+/* 인디케이터에 마우스 올렸을 때 */
+.indicator:hover {
+    /* 배경색 밝게 변경 */
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* 태블릿용 스타일 (화면 크기 768px 이하) */
+@media (max-width: 768px) {
+    .header {
+        /* 헤더 안쪽 여백 줄이기 */
+        padding: 10px 20px;
+        /* 간격 줄이기 */
+        gap: 5px;
+    }
+    
+    .brand-name {
+        /* 글자 크기 줄이기 */
+        font-size: 20px;
+    }
+    
+    .nav-menu {
+        /* 메뉴 간격 줄이기 */
+        gap: 20px;
+    }
+    
+    .menu-item {
+        /* 글자 크기 줄이기 */
+        font-size: 14px;
+    }
+    
+    .login-btn {
+        /* 글자 크기 줄이기 */
+        font-size: 14px;
+        /* 버튼 여백 줄이기 */
+        padding: 8px 20px;
+    }
+    
+    /* 히어로 섹션 태블릿 스타일 */
+    .hero-brand {
+        /* 글자 크기 줄이기 */
+        font-size: 36px;
+    }
+    
+    .hero-title {
+        /* 글자 크기 줄이기 */
+        font-size: 28px;
+    }
+    
+    .hero-description {
+        /* 글자 크기 줄이기 */
+        font-size: 18px;
+    }
+    
+    .hero-btn {
+        /* 글자 크기 줄이기 */
+        font-size: 16px;
+        /* 버튼 여백 줄이기 */
+        padding: 12px 30px;
+    }
+    
+    .hero-arrow {
+        /* 화살표 크기 줄이기 */
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+    
+    .hero-arrow-left {
+        /* 왼쪽 여백 줄이기 */
+        left: 20px;
+    }
+    
+    .hero-arrow-right {
+        /* 오른쪽 여백 줄이기 */
+        right: 20px;
+    }
+}
+
+/* 모바일용 스타일 (화면 크기 480px 이하) */
+@media (max-width: 480px) {
+    .header {
+        /* 헤더 안쪽 여백 더 줄이기 */
+        padding: 8px 15px;
+        /* 세로 방향으로 배치 변경 */
+        flex-direction: column;
+        /* 간격 조정 */
+        gap: 10px;
+        /* 높이 자동 조정 */
+        min-height: auto;
+    }
+    
+    .logo-section {
+        /* 로고 섹션 간격 줄이기 */
+        gap: 10px;
+    }
+    
+    .logo {
+        /* 로고 크기 줄이기 */
+        height: 30px;
+    }
+    
+    .brand-name {
+        /* 글자 크기 더 줄이기 */
+        font-size: 18px;
+    }
+    
+    .nav-menu {
+        /* 메뉴 간격 줄이기 */
+        gap: 15px;
+    }
+    
+    .menu-item {
+        /* 글자 크기 더 줄이기 */
+        font-size: 13px;
+    }
+    
+    .login-btn {
+        /* 글자 크기 더 줄이기 */
+        font-size: 13px;
+        /* 버튼 여백 더 줄이기 */
+        padding: 6px 15px;
+    }
+    
+    /* 히어로 섹션 모바일 스타일 */
+    .hero-content {
+        /* 안쪽 여백 줄이기 */
+        padding: 20px 15px;
+    }
+    
+    .hero-brand {
+        /* 글자 크기 더 줄이기 */
+        font-size: 28px;
+        /* 아래쪽 여백 줄이기 */
+        margin-bottom: 15px;
+    }
+    
+    .hero-title {
+        /* 글자 크기 더 줄이기 */
+        font-size: 22px;
+        /* 아래쪽 여백 줄이기 */
+        margin-bottom: 15px;
+    }
+    
+    .hero-description {
+        /* 글자 크기 더 줄이기 */
+        font-size: 16px;
+        /* 아래쪽 여백 줄이기 */
+        margin-bottom: 30px;
+    }
+    
+    .hero-btn {
+        /* 글자 크기 더 줄이기 */
+        font-size: 14px;
+        /* 버튼 여백 더 줄이기 */
+        padding: 10px 25px;
+    }
+    
+    .hero-arrow {
+        /* 화살표 크기 더 줄이기 */
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+    
+    .hero-arrow-left {
+        /* 왼쪽 여백 더 줄이기 */
+        left: 15px;
+    }
+    
+    .hero-arrow-right {
+        /* 오른쪽 여백 더 줄이기 */
+        right: 15px;
+    }
+    
+    .hero-indicators {
+        /* 아래쪽 여백 줄이기 */
+        bottom: 20px;
+        /* 간격 줄이기 */
+        gap: 10px;
+    }
+    
+    .indicator {
+        /* 크기 줄이기 */
+        width: 10px;
+        height: 10px;
+    }
+} 

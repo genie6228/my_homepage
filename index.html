@@ -31,6 +31,71 @@
         <button class="login-btn">로그인</button>
     </header>
     
+    <!-- 히어로 섹션 시작 -->
+    <section class="hero">
+        <!-- 캐러셀 컨테이너 -->
+        <div class="hero-carousel">
+            <!-- 슬라이드 1 -->
+            <div class="hero-slide active" style="background-image: url('images/hero01.jpg');">
+                <div class="hero-content">
+                    <!-- 브랜드 이름 (큰 글씨) -->
+                    <h1 class="hero-brand">중간계 AI 스튜디오</h1>
+                    <!-- 메인 제목 -->
+                    <h2 class="hero-title">당신의 아이디어, 브랜드가 되다</h2>
+                    <!-- 설명 문구 -->
+                    <p class="hero-description">브랜드 이름에서부터 웹사이트까지, 사업성공을 함께 합니다</p>
+                    <!-- 구매하기 버튼 -->
+                    <button class="hero-btn" onclick="window.open('https://smartstore.naver.com', '_blank')">구매하기</button>
+                </div>
+            </div>
+            
+            <!-- 슬라이드 2 -->
+            <div class="hero-slide" style="background-image: url('images/hero02.jpg');">
+                <div class="hero-content">
+                    <!-- 브랜드 이름 (큰 글씨) -->
+                    <h1 class="hero-brand">중간계 AI 스튜디오</h1>
+                    <!-- 메인 제목 -->
+                    <h2 class="hero-title">쉽고 빠르게, 원하는 것을 구축하다</h2>
+                    <!-- 설명 문구 -->
+                    <p class="hero-description">아이디어에서 실현까지 중간계 AI가 함께합니다</p>
+                    <!-- 구매하기 버튼 -->
+                    <button class="hero-btn" onclick="window.open('https://smartstore.naver.com', '_blank')">구매하기</button>
+                </div>
+            </div>
+            
+            <!-- 슬라이드 3 -->
+            <div class="hero-slide" style="background-image: url('images/hero03.jpg');">
+                <div class="hero-content">
+                    <!-- 브랜드 이름 (큰 글씨) -->
+                    <h1 class="hero-brand">중간계 AI 스튜디오</h1>
+                    <!-- 메인 제목 -->
+                    <h2 class="hero-title">상상력에 날개를, 날아 오르다</h2>
+                    <!-- 설명 문구 -->
+                    <p class="hero-description">꿈이 아니라, 현실이 될 것입니다</p>
+                    <!-- 구매하기 버튼 -->
+                    <button class="hero-btn" onclick="window.open('https://smartstore.naver.com', '_blank')">구매하기</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 왼쪽 화살표 버튼 -->
+        <button class="hero-arrow hero-arrow-left" onclick="previousSlide()">
+            <span>&lt;</span>
+        </button>
+        
+        <!-- 오른쪽 화살표 버튼 -->
+        <button class="hero-arrow hero-arrow-right" onclick="nextSlide()">
+            <span>&gt;</span>
+        </button>
+        
+        <!-- 슬라이드 인디케이터 (점 표시) -->
+        <div class="hero-indicators">
+            <span class="indicator active" onclick="currentSlide(1)"></span>
+            <span class="indicator" onclick="currentSlide(2)"></span>
+            <span class="indicator" onclick="currentSlide(3)"></span>
+        </div>
+    </section>
+    
     <!-- 자바스크립트 파일 연결하기 -->
     <script src="script.js"></script>
 </body>
