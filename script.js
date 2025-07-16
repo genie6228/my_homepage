@@ -166,6 +166,94 @@ document.addEventListener('DOMContentLoaded', function() {
     // 전역 함수로 만들어서 HTML에서 onclick으로 사용할 수 있게 하기
     window.toggleDescription = toggleDescription;
     
+    // CEO 인사말 더보기/닫기 기능
+    // CEO 인사말을 펼치거나 접는 함수
+    function toggleCeoMessage() {
+        // CEO 요약 인사말 요소 찾기
+        const ceoSummary = document.querySelector('.ceo-summary');
+        
+        // CEO 전체 인사말 요소 찾기
+        const ceoFull = document.getElementById('ceo-full-message');
+        
+        // CEO 더보기 버튼 찾기
+        const moreBtn = document.querySelector('.ceo-more-btn');
+        
+        // CEO 닫기 버튼 찾기
+        const closeBtn = document.getElementById('ceo-close-btn');
+        
+        // 현재 전체 인사말이 보이는지 확인
+        const isFullVisible = ceoFull.style.display !== 'none';
+        
+        if (isFullVisible) {
+            // 전체 인사말이 보이면 요약으로 변경
+            ceoSummary.style.display = 'block';
+            ceoFull.style.display = 'none';
+            moreBtn.style.display = 'inline-block';
+            closeBtn.style.display = 'none';
+            // 콘솔에 메시지 출력
+            console.log('CEO 인사말을 요약으로 접었습니다.');
+        } else {
+            // 요약이 보이면 전체 인사말로 변경
+            ceoSummary.style.display = 'none';
+            ceoFull.style.display = 'block';
+            moreBtn.style.display = 'none';
+            closeBtn.style.display = 'inline-block';
+            // 콘솔에 메시지 출력
+            console.log('CEO 인사말을 전체로 펼쳤습니다.');
+        }
+    }
+    
+    // 전역 함수로 만들어서 HTML에서 onclick으로 사용할 수 있게 하기
+    window.toggleCeoMessage = toggleCeoMessage;
+    
+    // Q&A 섹션 질문 제출 기능
+    // 질문 제출 폼을 처리하는 함수
+    function submitQuestion(event) {
+        // 폼 기본 제출 동작 막기
+        event.preventDefault();
+        
+        // 질문 제목과 내용 입력 필드 찾기
+        const questionTitle = document.getElementById('question-title');
+        const questionContent = document.getElementById('question-content');
+        
+        // 질문 완료 메시지 요소 찾기
+        const successMessage = document.getElementById('question-success');
+        
+        // 입력된 제목과 내용 가져오기
+        const titleValue = questionTitle.value.trim();
+        const contentValue = questionContent.value.trim();
+        
+        // 입력 내용 확인
+        if (titleValue === '' || contentValue === '') {
+            // 입력이 비어있으면 경고 메시지 표시
+            alert('질문 제목과 내용을 모두 입력해주세요.');
+            return;
+        }
+        
+        // 콘솔에 질문 내용 출력 (개발자 도구에서 확인 가능)
+        console.log('질문이 제출되었습니다:');
+        console.log('제목: ' + titleValue);
+        console.log('내용: ' + contentValue);
+        
+        // 입력 필드 초기화
+        questionTitle.value = '';
+        questionContent.value = '';
+        
+        // 성공 메시지 표시
+        successMessage.style.display = 'block';
+        
+        // 3초 후에 성공 메시지 숨기기
+        setTimeout(function() {
+            successMessage.style.display = 'none';
+        }, 3000);
+        
+        // 콘솔에 완료 메시지 출력
+        console.log('질문 제출이 완료되었습니다. 이메일로 답변을 보내드릴 예정입니다.');
+    }
+    
+    // 전역 함수로 만들어서 HTML에서 onsubmit으로 사용할 수 있게 하기
+    window.submitQuestion = submitQuestion;
+    
     // 콘솔에 초기화 완료 메시지 출력
     console.log('중간계AI 스튜디오 헤더가 성공적으로 로드되었습니다!');
     console.log('히어로 캐러셀이 성공적으로 초기화되었습니다!');
@@ -173,4 +261,10 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('제품 섹션 더보기/접기 기능이 준비되었습니다!');
     console.log('고객 후기 섹션이 성공적으로 로드되었습니다!');
     console.log('총 6개의 고객 후기가 준비되었습니다.');
+    console.log('CEO 인사말 섹션이 성공적으로 로드되었습니다!');
+    console.log('CEO 인사말 더보기/닫기 기능이 준비되었습니다!');
+    console.log('Q&A 섹션이 성공적으로 로드되었습니다!');
+    console.log('Q&A 질문 제출 기능이 준비되었습니다!');
+    console.log('푸터 섹션이 성공적으로 로드되었습니다!');
+    console.log('모든 섹션이 성공적으로 초기화되었습니다!');
 }); 

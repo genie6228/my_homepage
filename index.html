@@ -445,6 +445,171 @@
         </div>
     </section>
     
+    <!-- Q&A 섹션 시작 -->
+    <section class="qa-section">
+        <!-- Q&A 컨테이너 -->
+        <div class="qa-container">
+            <!-- Q&A 섹션 제목 -->
+            <h1 class="qa-title">Q&A</h1>
+            
+            <!-- Q&A 내용 (좌우 배치) -->
+            <div class="qa-content">
+                <!-- 좌측 질문 입력 폼 -->
+                <div class="qa-form">
+                    <h2 class="qa-form-title">궁금한 점이 있으시면 언제든지 문의하세요</h2>
+                    
+                    <!-- 질문 입력 폼 -->
+                    <form class="question-form" onsubmit="submitQuestion(event)">
+                        <!-- 질문 제목 입력 -->
+                        <div class="form-group">
+                            <label for="question-title">질문 제목</label>
+                            <input type="text" id="question-title" name="question-title" placeholder="질문 제목을 입력해주세요" required>
+                        </div>
+                        
+                        <!-- 질문 내용 입력 -->
+                        <div class="form-group">
+                            <label for="question-content">질문 내용</label>
+                            <textarea id="question-content" name="question-content" placeholder="궁금한 내용을 자세히 적어주세요" required></textarea>
+                        </div>
+                        
+                        <!-- 질문 제출 버튼 -->
+                        <button type="submit" class="submit-btn">질문 제출</button>
+                    </form>
+                    
+                    <!-- 질문 완료 메시지 (처음에는 숨김) -->
+                    <div class="question-success" id="question-success" style="display: none;">
+                        <p>질문이 접수되었습니다. 곧 이메일로 답변 드리겠습니다.</p>
+                    </div>
+                </div>
+                
+                <!-- 우측 FAQ 자주 묻는 질문 -->
+                <div class="faq-section">
+                    <h2 class="faq-title">자주 묻는 질문</h2>
+                    
+                    <!-- FAQ 목록 -->
+                    <div class="faq-list">
+                        <!-- FAQ 1 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <strong>Q: 쇼츠 영상은 어떤 스타일로 만들어지나요?</strong>
+                            </div>
+                            <div class="faq-answer">
+                                <p>→ 행동유도형, 장점소개형, 브랜드홍보형 등 목적에 따라 스타일을 맞춰 제작합니다.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ 2 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <strong>Q: 웹페이지는 모바일에서도 볼 수 있나요?</strong>
+                            </div>
+                            <div class="faq-answer">
+                                <p>→ 네, 반응형 웹 디자인으로 모바일, 태블릿, PC에 모두 최적화됩니다.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ 3 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <strong>Q: 챗봇도 포함되나요?</strong>
+                            </div>
+                            <div class="faq-answer">
+                                <p>→ 네, 챗봇 Chat GPTs 를 이용하여, 인공지능 챗봇을 구성합니다.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ 4 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <strong>Q: 브랜드 이름은 몇 개나 받아볼 수 있나요?</strong>
+                            </div>
+                            <div class="faq-answer">
+                                <p>→ 총 3개의 대안을 제안드리며, 그중 1개를 최종 선택하실 수 있습니다.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- FAQ 5 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <strong>Q: 브랜드 스토리는 어떤 분량으로 제공되나요?</strong>
+                            </div>
+                            <div class="faq-answer">
+                                <p>→ 600자 / 400자 / 200자 3가지 분량으로 제공됩니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 푸터 섹션 시작 -->
+    <footer class="footer">
+        <!-- 푸터 컨테이너 -->
+        <div class="footer-container">
+            <!-- 푸터 상단 (회사 정보) -->
+            <div class="footer-top">
+                <!-- 좌측 회사 정보 -->
+                <div class="footer-info">
+                    <!-- 이용약관 및 개인정보처리방침 -->
+                    <div class="footer-links">
+                        <a href="#" class="footer-link">이용약관</a>
+                        <span class="footer-separator">|</span>
+                        <a href="#" class="footer-link">개인정보처리방침</a>
+                    </div>
+                    
+                    <!-- 회사 상세 정보 -->
+                    <div class="footer-details">
+                        <p><strong>고객센터</strong> 02-6952-9454, 9455</p>
+                        <p><strong>FAX</strong> 02-6952-9553</p>
+                        <p><strong>운영시간</strong> 오전10시~ 오후 6시(주말, 공휴일 제외)</p>
+                        <p><strong>주소</strong> 서울특별시 서초구 논현로 173, 5층</p>
+                        <p><strong>사업자등록번호</strong> 211-88-80844</p>
+                        <p><strong>통신판매업신고</strong> 2021-서울서초-3279</p>
+                        <p><strong>업체명</strong> 주식회사 중간계캠퍼스</p>
+                        <p><strong>대표이사</strong> 신병철</p>
+                        <p><strong>개인정보관리 책임자</strong> 전진 midcampus31@gmail.com</p>
+                    </div>
+                </div>
+                
+                <!-- 우측 소셜 미디어 링크 -->
+                <div class="footer-social">
+                    <h3 class="social-title">소셜 미디어</h3>
+                    <div class="social-links">
+                        <!-- 인스타그램 링크 -->
+                        <a href="https://www.instagram.com" target="_blank" class="social-link">
+                            <img src="images/instagram-icon.png" alt="인스타그램" class="social-icon">
+                            <span>인스타그램</span>
+                        </a>
+                        
+                        <!-- 페이스북 링크 -->
+                        <a href="https://www.facebook.com" target="_blank" class="social-link">
+                            <img src="images/facebook-icon.png" alt="페이스북" class="social-icon">
+                            <span>페이스북</span>
+                        </a>
+                        
+                        <!-- 유튜브 링크 -->
+                        <a href="https://www.youtube.com" target="_blank" class="social-link">
+                            <img src="images/youtube-icon.png" alt="유튜브" class="social-icon">
+                            <span>유튜브</span>
+                        </a>
+                        
+                        <!-- 블로그 링크 -->
+                        <a href="https://blog.naver.com" target="_blank" class="social-link">
+                            <img src="images/blog-icon.png" alt="블로그" class="social-icon">
+                            <span>블로그</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 푸터 하단 (저작권 정보) -->
+            <div class="footer-bottom">
+                <p class="copyright">COPYRIGHT 중간계캠퍼스. ALL RIGHTS RESERVED</p>
+            </div>
+        </div>
+    </footer>
+    
     <!-- 자바스크립트 파일 연결하기 -->
     <script src="script.js"></script>
 </body>
