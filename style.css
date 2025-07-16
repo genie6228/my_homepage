@@ -365,6 +365,421 @@ body {
     background-color: rgba(255, 255, 255, 0.8);
 }
 
+/* 제품 섹션 기본 스타일 */
+.product {
+    /* 배경색 흰색 */
+    background-color: white;
+    /* 위아래 여백 */
+    padding: 80px 0;
+    /* 최소 높이 설정 */
+    min-height: 100vh;
+}
+
+/* 제품 컨테이너 스타일 */
+.product-container {
+    /* 최대 너비 설정 */
+    max-width: 1200px;
+    /* 좌우 여백 자동 (가운데 정렬) */
+    margin: 0 auto;
+    /* 좌우 안쪽 여백 */
+    padding: 0 20px;
+}
+
+/* 매장 이미지 섹션 스타일 */
+.shop-image {
+    /* 텍스트 가운데 정렬 */
+    text-align: center;
+    /* 아래쪽 여백 */
+    margin-bottom: 50px;
+}
+
+/* 매장 이미지 스타일 */
+.shop-img {
+    /* 최대 너비 설정 */
+    max-width: 100%;
+    /* 높이 자동 조정 */
+    height: auto;
+    /* 둥근 모서리 */
+    border-radius: 15px;
+    /* 그림자 추가 */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    /* 최대 높이 제한 */
+    max-height: 400px;
+    /* 이미지 비율 유지 */
+    object-fit: cover;
+}
+
+/* 제품 섹션 제목 스타일 */
+.product-title {
+    /* 글자 크기 크게 설정 */
+    font-size: 42px;
+    /* 글자 두께 */
+    font-weight: 700;
+    /* 글자 색상 검은색 */
+    color: #333;
+    /* 텍스트 가운데 정렬 */
+    text-align: center;
+    /* 아래쪽 여백 */
+    margin-bottom: 60px;
+    /* 줄 간격 */
+    line-height: 1.2;
+}
+
+/* 제품 그리드 스타일 (2x2 형태) */
+.product-grid {
+    /* 그리드 레이아웃 사용 */
+    display: grid;
+    /* 2개의 열로 배치 */
+    grid-template-columns: 1fr 1fr;
+    /* 행과 열 사이의 간격 */
+    gap: 40px;
+    /* 위쪽 여백 */
+    margin-top: 40px;
+}
+
+/* 개별 제품 아이템 스타일 */
+.product-item {
+    /* 배경색 흰색 */
+    background-color: white;
+    /* 둥근 모서리 */
+    border-radius: 15px;
+    /* 그림자 추가 */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    /* 넘치는 내용 숨기기 */
+    overflow: hidden;
+    /* 호버 효과 애니메이션 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 제품 아이템에 마우스 올렸을 때 */
+.product-item:hover {
+    /* 살짝 위로 올리기 */
+    transform: translateY(-5px);
+    /* 그림자 더 진하게 */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* 제품 이미지 컨테이너 스타일 */
+.product-image {
+    /* 이미지 상단 배치 */
+    width: 100%;
+    /* 높이 설정 */
+    height: 250px;
+    /* 넘치는 내용 숨기기 */
+    overflow: hidden;
+    /* 좌우 여백 3px씩 */
+    margin: 0 3px;
+}
+
+/* 제품 이미지 스타일 */
+.product-img {
+    /* 이미지 전체 크기 */
+    width: 100%;
+    height: 100%;
+    /* 이미지 비율 유지하며 채우기 */
+    object-fit: cover;
+    /* 호버 효과 애니메이션 */
+    transition: transform 0.3s ease;
+}
+
+/* 제품 이미지에 마우스 올렸을 때 */
+.product-img:hover {
+    /* 이미지 살짝 확대 */
+    transform: scale(1.05);
+}
+
+/* 제품 설명 섹션 스타일 */
+.product-description {
+    /* 안쪽 여백 */
+    padding: 25px;
+}
+
+/* 제품 이름 스타일 */
+.product-name {
+    /* 글자 크기 */
+    font-size: 22px;
+    /* 글자 두께 */
+    font-weight: 600;
+    /* 글자 색상 */
+    color: #333;
+    /* 아래쪽 여백 */
+    margin-bottom: 15px;
+    /* 줄 간격 */
+    line-height: 1.3;
+}
+
+/* 제품 요약 설명 스타일 (처음에 보이는 3줄) */
+.product-summary {
+    /* 아래쪽 여백 */
+    margin-bottom: 20px;
+}
+
+/* 제품 요약 설명 내 문단 스타일 */
+.product-summary p {
+    /* 글자 크기 */
+    font-size: 16px;
+    /* 글자 색상 */
+    color: #666;
+    /* 줄 간격 */
+    line-height: 1.6;
+    /* 아래쪽 여백 */
+    margin-bottom: 8px;
+}
+
+/* 더보기 버튼 스타일 */
+.more-btn {
+    /* 배경색 */
+    background-color: #007bff;
+    /* 글자 색상 */
+    color: white;
+    /* 테두리 없음 */
+    border: none;
+    /* 둥근 모서리 */
+    border-radius: 25px;
+    /* 글자 크기 */
+    font-size: 14px;
+    /* 글자 두께 */
+    font-weight: 500;
+    /* 버튼 안쪽 여백 */
+    padding: 8px 20px;
+    /* 마우스 올렸을 때 손가락 모양 */
+    cursor: pointer;
+    /* 색상 변화 애니메이션 */
+    transition: all 0.3s ease;
+    /* 폰트 상속 */
+    font-family: inherit;
+    /* 아래쪽 여백 */
+    margin-bottom: 15px;
+}
+
+/* 더보기 버튼에 마우스 올렸을 때 */
+.more-btn:hover {
+    /* 배경색 변경 */
+    background-color: #0056b3;
+    /* 버튼을 살짝 위로 올리기 */
+    transform: translateY(-1px);
+}
+
+/* 제품 전체 설명 스타일 */
+.product-full {
+    /* 위쪽 여백 */
+    margin-top: 15px;
+    /* 애니메이션 효과 */
+    transition: all 0.3s ease;
+}
+
+/* 제품 전체 설명 내 문단 스타일 */
+.product-full p {
+    /* 글자 크기 */
+    font-size: 15px;
+    /* 글자 색상 */
+    color: #555;
+    /* 줄 간격 */
+    line-height: 1.6;
+    /* 아래쪽 여백 */
+    margin-bottom: 10px;
+}
+
+/* 제품 전체 설명 내 리스트 스타일 */
+.product-full ul {
+    /* 왼쪽 여백 */
+    margin-left: 20px;
+    /* 아래쪽 여백 */
+    margin-bottom: 15px;
+}
+
+/* 제품 전체 설명 내 리스트 항목 스타일 */
+.product-full li {
+    /* 글자 크기 */
+    font-size: 14px;
+    /* 글자 색상 */
+    color: #666;
+    /* 줄 간격 */
+    line-height: 1.5;
+    /* 아래쪽 여백 */
+    margin-bottom: 5px;
+}
+
+/* 강조 텍스트 스타일 */
+.product-full strong {
+    /* 글자 색상 */
+    color: #333;
+    /* 글자 두께 */
+    font-weight: 600;
+}
+
+/* 이탤릭 텍스트 스타일 */
+.product-full em {
+    /* 글자 색상 */
+    color: #888;
+    /* 글자 크기 */
+    font-size: 13px;
+}
+
+/* 고객 후기 섹션 기본 스타일 */
+.review {
+    /* 배경색 연한 회색 */
+    background-color: #f8f9fa;
+    /* 위아래 여백 */
+    padding: 80px 0;
+    /* 최소 높이 설정 */
+    min-height: 100vh;
+}
+
+/* 고객 후기 컨테이너 스타일 */
+.review-container {
+    /* 최대 너비 설정 */
+    max-width: 1200px;
+    /* 좌우 여백 자동 (가운데 정렬) */
+    margin: 0 auto;
+    /* 좌우 안쪽 여백 */
+    padding: 0 20px;
+}
+
+/* 고객 후기 섹션 제목 스타일 */
+.review-title {
+    /* 글자 크기 크게 설정 */
+    font-size: 42px;
+    /* 글자 두께 */
+    font-weight: 700;
+    /* 글자 색상 검은색 */
+    color: #333;
+    /* 텍스트 가운데 정렬 */
+    text-align: center;
+    /* 아래쪽 여백 */
+    margin-bottom: 60px;
+    /* 줄 간격 */
+    line-height: 1.2;
+}
+
+/* 고객 후기 그리드 스타일 (3x2 형태) */
+.review-grid {
+    /* 그리드 레이아웃 사용 */
+    display: grid;
+    /* 3개의 열로 배치 */
+    grid-template-columns: repeat(3, 1fr);
+    /* 행과 열 사이의 간격 */
+    gap: 30px;
+    /* 위쪽 여백 */
+    margin-top: 40px;
+}
+
+/* 개별 후기 아이템 스타일 */
+.review-item {
+    /* 배경색 흰색 */
+    background-color: white;
+    /* 둥근 모서리 */
+    border-radius: 15px;
+    /* 그림자 추가 */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    /* 안쪽 여백 */
+    padding: 30px;
+    /* 텍스트 가운데 정렬 */
+    text-align: center;
+    /* 호버 효과 애니메이션 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* 세로 방향 배치 */
+    display: flex;
+    flex-direction: column;
+    /* 세로 간격 조정 */
+    gap: 20px;
+}
+
+/* 후기 아이템에 마우스 올렸을 때 */
+.review-item:hover {
+    /* 살짝 위로 올리기 */
+    transform: translateY(-5px);
+    /* 그림자 더 진하게 */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* 별점 표시 섹션 스타일 */
+.review-stars {
+    /* 별점을 가운데 정렬 */
+    text-align: center;
+    /* 아래쪽 여백 */
+    margin-bottom: 15px;
+}
+
+/* 개별 별 스타일 */
+.star {
+    /* 별 색상 (노란색) */
+    color: #ffd700;
+    /* 별 크기 */
+    font-size: 24px;
+    /* 별 사이 간격 */
+    margin: 0 2px;
+    /* 별 그림자 효과 */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* 후기 내용 섹션 스타일 */
+.review-content {
+    /* 위아래 여백 */
+    margin: 20px 0;
+    /* 텍스트 가운데 정렬 */
+    text-align: center;
+    /* 세로 방향으로 늘어나게 하기 */
+    flex-grow: 1;
+}
+
+/* 후기 내용 문단 스타일 */
+.review-content p {
+    /* 글자 크기 */
+    font-size: 16px;
+    /* 글자 색상 */
+    color: #555;
+    /* 줄 간격 */
+    line-height: 1.6;
+    /* 아래쪽 여백 */
+    margin-bottom: 10px;
+    /* 글자 두께 */
+    font-weight: 400;
+}
+
+/* 마지막 문단은 아래 여백 없애기 */
+.review-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* 고객 정보 섹션 스타일 */
+.review-author {
+    /* 위쪽 여백 */
+    margin-top: 20px;
+    /* 텍스트 가운데 정렬 */
+    text-align: center;
+    /* 위쪽 테두리 추가 */
+    border-top: 1px solid #eee;
+    /* 위쪽 안쪽 여백 */
+    padding-top: 20px;
+}
+
+/* 고객 이름 스타일 */
+.review-author strong {
+    /* 글자 크기 */
+    font-size: 18px;
+    /* 글자 색상 */
+    color: #333;
+    /* 글자 두께 */
+    font-weight: 600;
+    /* 블록 요소로 변경 (줄바꿈) */
+    display: block;
+    /* 아래쪽 여백 */
+    margin-bottom: 5px;
+}
+
+/* 고객 업종 정보 스타일 */
+.review-author span {
+    /* 글자 크기 */
+    font-size: 14px;
+    /* 글자 색상 */
+    color: #777;
+    /* 글자 두께 */
+    font-weight: 400;
+    /* 이탤릭 체 */
+    font-style: italic;
+}
+
 /* 태블릿용 스타일 (화면 크기 768px 이하) */
 @media (max-width: 768px) {
     .header {
@@ -434,6 +849,79 @@ body {
     .hero-arrow-right {
         /* 오른쪽 여백 줄이기 */
         right: 20px;
+    }
+    
+    /* 제품 섹션 태블릿 스타일 */
+    .product {
+        /* 위아래 여백 줄이기 */
+        padding: 60px 0;
+    }
+    
+    .product-title {
+        /* 글자 크기 줄이기 */
+        font-size: 32px;
+        /* 아래쪽 여백 줄이기 */
+        margin-bottom: 40px;
+    }
+    
+    .product-grid {
+        /* 그리드 간격 줄이기 */
+        gap: 30px;
+    }
+    
+    .product-image {
+        /* 이미지 높이 줄이기 */
+        height: 200px;
+    }
+    
+    .product-name {
+        /* 글자 크기 줄이기 */
+        font-size: 20px;
+    }
+    
+    .product-summary p {
+        /* 글자 크기 줄이기 */
+        font-size: 15px;
+    }
+    
+    /* 고객 후기 섹션 태블릿 스타일 */
+    .review {
+        /* 위아래 여백 줄이기 */
+        padding: 60px 0;
+    }
+    
+    .review-title {
+        /* 글자 크기 줄이기 */
+        font-size: 32px;
+        /* 아래쪽 여백 줄이기 */
+        margin-bottom: 40px;
+    }
+    
+    .review-grid {
+        /* 태블릿에서는 2열로 변경 */
+        grid-template-columns: repeat(2, 1fr);
+        /* 그리드 간격 줄이기 */
+        gap: 25px;
+    }
+    
+    .review-item {
+        /* 안쪽 여백 줄이기 */
+        padding: 25px;
+    }
+    
+    .star {
+        /* 별 크기 줄이기 */
+        font-size: 20px;
+    }
+    
+    .review-content p {
+        /* 글자 크기 줄이기 */
+        font-size: 15px;
+    }
+    
+    .review-author strong {
+        /* 글자 크기 줄이기 */
+        font-size: 16px;
     }
 }
 
@@ -544,5 +1032,131 @@ body {
         /* 크기 줄이기 */
         width: 10px;
         height: 10px;
+    }
+    
+    /* 제품 섹션 모바일 스타일 */
+    .product {
+        /* 위아래 여백 더 줄이기 */
+        padding: 40px 0;
+    }
+    
+    .product-container {
+        /* 좌우 여백 줄이기 */
+        padding: 0 15px;
+    }
+    
+    .shop-image {
+        /* 아래쪽 여백 줄이기 */
+        margin-bottom: 30px;
+    }
+    
+    .shop-img {
+        /* 최대 높이 줄이기 */
+        max-height: 250px;
+    }
+    
+    .product-title {
+        /* 글자 크기 더 줄이기 */
+        font-size: 26px;
+        /* 아래쪽 여백 줄이기 */
+        margin-bottom: 30px;
+    }
+    
+    .product-grid {
+        /* 모바일에서는 1열로 변경 */
+        grid-template-columns: 1fr;
+        /* 그리드 간격 줄이기 */
+        gap: 25px;
+    }
+    
+    .product-image {
+        /* 이미지 높이 더 줄이기 */
+        height: 180px;
+    }
+    
+    .product-description {
+        /* 안쪽 여백 줄이기 */
+        padding: 20px;
+    }
+    
+    .product-name {
+        /* 글자 크기 더 줄이기 */
+        font-size: 18px;
+        /* 아래쪽 여백 줄이기 */
+        margin-bottom: 12px;
+    }
+    
+    .product-summary p {
+        /* 글자 크기 더 줄이기 */
+        font-size: 14px;
+    }
+    
+    .more-btn {
+        /* 글자 크기 줄이기 */
+        font-size: 13px;
+        /* 버튼 여백 줄이기 */
+        padding: 6px 16px;
+    }
+    
+    .product-full p {
+        /* 글자 크기 줄이기 */
+        font-size: 14px;
+    }
+    
+    .product-full li {
+        /* 글자 크기 줄이기 */
+        font-size: 13px;
+    }
+    
+    /* 고객 후기 섹션 모바일 스타일 */
+    .review {
+        /* 위아래 여백 더 줄이기 */
+        padding: 40px 0;
+    }
+    
+    .review-container {
+        /* 좌우 여백 줄이기 */
+        padding: 0 15px;
+    }
+    
+    .review-title {
+        /* 글자 크기 더 줄이기 */
+        font-size: 26px;
+        /* 아래쪽 여백 줄이기 */
+        margin-bottom: 30px;
+    }
+    
+    .review-grid {
+        /* 모바일에서는 1열로 변경 */
+        grid-template-columns: 1fr;
+        /* 그리드 간격 줄이기 */
+        gap: 20px;
+    }
+    
+    .review-item {
+        /* 안쪽 여백 더 줄이기 */
+        padding: 20px;
+        /* 세로 간격 줄이기 */
+        gap: 15px;
+    }
+    
+    .star {
+        /* 별 크기 더 줄이기 */
+        font-size: 18px;
+    }
+    
+    .review-content p {
+        /* 글자 크기 더 줄이기 */
+        font-size: 14px;
+    }
+    
+    .review-author strong {
+        /* 글자 크기 더 줄이기 */
+        font-size: 15px;
+    }
+    
+    .review-author span {
+        /* 글자 크기 줄이기 */
+        font-size: 13px;
     }
 } 

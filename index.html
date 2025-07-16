@@ -96,6 +96,355 @@
         </div>
     </section>
     
+    <!-- 제품 섹션 시작 -->
+    <section class="product">
+        <!-- 제품 컨테이너 -->
+        <div class="product-container">
+            <!-- 매장 대표 이미지 -->
+            <div class="shop-image">
+                <img src="images/shop1.jpg" alt="중간계AI 스튜디오 매장" class="shop-img">
+            </div>
+            
+            <!-- 제품 섹션 제목 -->
+            <h1 class="product-title">중간계 AI 스튜디오 4가지 상품</h1>
+            
+            <!-- 제품 그리드 (2x2 형태) -->
+            <div class="product-grid">
+                <!-- 제품 1: AI 상세페이지 -->
+                <div class="product-item">
+                    <!-- 제품 이미지 -->
+                    <div class="product-image">
+                        <img src="images/pd1.jpg" alt="AI 상세페이지" class="product-img">
+                    </div>
+                    <!-- 제품 설명 -->
+                    <div class="product-description">
+                        <h3 class="product-name">AI 상세페이지</h3>
+                        <!-- 처음에 보이는 3줄 설명 -->
+                        <div class="product-summary">
+                            <p>AI,인공지능 추천에 최적화된 상세페이지</p>
+                            <p>상세페이지 기획 + 구성 + 디자인</p>
+                            <p>고객의 구매 패턴을 분석하여 개인 맞춤형 상품을 구성합니다.</p>
+                        </div>
+                        <!-- 더보기 버튼 -->
+                        <button class="more-btn" onclick="toggleDescription(1)">더보기</button>
+                        <!-- 전체 설명 (처음에는 숨김) -->
+                        <div class="product-full" id="product-full-1" style="display: none;">
+                            <p>AI 추천 알고리즘을 최적화하여, 전환율을 높일수 있는 상세페이지를 제작합니다.</p>
+                            <p><strong>기간:</strong> 난이도에 따라, 1주일~2주일</p>
+                            <p><strong>가격:</strong></p>
+                            <ul>
+                                <li>디자인 작업 : 50~80만</li>
+                                <li>디자인 + 세부기획 : 100~200만</li>
+                                <li>디자인 + 세부기획 + 영상 + 효과 : 200~500만</li>
+                            </ul>
+                            <p><em>촬영이 필요할 경우, 추가 기간, 비용 발생</em></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 제품 2: AI 쇼츠, 릴스 -->
+                <div class="product-item">
+                    <!-- 제품 이미지 -->
+                    <div class="product-image">
+                        <img src="images/pd2.jpg" alt="AI 쇼츠, 릴스" class="product-img">
+                    </div>
+                    <!-- 제품 설명 -->
+                    <div class="product-description">
+                        <h3 class="product-name">AI 쇼츠, 릴스 (30~60초)</h3>
+                        <!-- 처음에 보이는 3줄 설명 -->
+                        <div class="product-summary">
+                            <p>AI,인공지능 추천에 쇼츠,릴스 기획, 제작</p>
+                            <p>고객의 제품과 브랜드 특징을 고려하여, 주목도 높은 쇼츠, 릴스를 제작합니다.</p>
+                            <p>AI 추천 알고리즘을 최적화하여, 주목도, 전환율을 높일수 있는 쇼츠,릴스입니다.</p>
+                        </div>
+                        <!-- 더보기 버튼 -->
+                        <button class="more-btn" onclick="toggleDescription(2)">더보기</button>
+                        <!-- 전체 설명 (처음에는 숨김) -->
+                        <div class="product-full" id="product-full-2" style="display: none;">
+                            <p><strong>기간:</strong> 난이도에 따라, 1주일~2주일</p>
+                            <p><strong>가격:</strong></p>
+                            <ul>
+                                <li>단순 편집 : 30~50만</li>
+                                <li>기획 + 디자인 + 편집 : 50~100만</li>
+                                <li>기획 + 디자인 + 영상 효과 : 100~200만</li>
+                            </ul>
+                            <p><em>촬영이 필요할 경우, 추가 기간, 비용 발생</em></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 제품 3: 웹페이지, 랜딩페이지 -->
+                <div class="product-item">
+                    <!-- 제품 이미지 -->
+                    <div class="product-image">
+                        <img src="images/pd3.jpg" alt="웹페이지, 랜딩페이지" class="product-img">
+                    </div>
+                    <!-- 제품 설명 -->
+                    <div class="product-description">
+                        <h3 class="product-name">웹페이지, 랜딩페이지</h3>
+                        <!-- 처음에 보이는 3줄 설명 -->
+                        <div class="product-summary">
+                            <p>AI, 인공지능 최적화 웹페이지 기획, 디자인, 배포</p>
+                            <p>AI 기반 전략으로 웹페이지 성과를 극대화하세요.</p>
+                            <p>기획부터 디자인, 배포까지 전 과정 원스톱 지원!</p>
+                        </div>
+                        <!-- 더보기 버튼 -->
+                        <button class="more-btn" onclick="toggleDescription(3)">더보기</button>
+                        <!-- 전체 설명 (처음에는 숨김) -->
+                        <div class="product-full" id="product-full-3" style="display: none;">
+                            <p>방문자 행동을 분석해 전환율을 높입니다. 당신의 웹페이지,랜딩페이지를 이제 인공지능에 최적화 하십시오.</p>
+                            <p><strong>기간:</strong> 난이도에 따라, 1개월~3개월</p>
+                            <p><strong>가격:</strong></p>
+                            <ul>
+                                <li>브랜드, 제품, 예약, 구매, 챗봇 : 500만</li>
+                                <li>브랜드, 제품, 예약, 구매, 챗봇 + 로그인인증 : 700만</li>
+                                <li>브랜드, 제품, 예약, 구매, 챗봇 + 로그인인증 + DB + 고객관리 : 1000만</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 제품 4: 브랜드 Naming Package -->
+                <div class="product-item">
+                    <!-- 제품 이미지 -->
+                    <div class="product-image">
+                        <img src="images/pd4.jpg" alt="브랜드 Naming Package" class="product-img">
+                    </div>
+                    <!-- 제품 설명 -->
+                    <div class="product-description">
+                        <h3 class="product-name">브랜드 Naming Package</h3>
+                        <!-- 처음에 보이는 3줄 설명 -->
+                        <div class="product-summary">
+                            <p>현존 최고수준의 브랜드 Name Package</p>
+                            <p>창업자의 철학을 담아 직관적이고 감각적인 네이밍을 만들어드립니다.</p>
+                            <p>스시도쿠 겐, 견체공학, 헤겔의 빛 등 잊을수 없는 브랜드 이름을 지어드립니다.</p>
+                        </div>
+                        <!-- 더보기 버튼 -->
+                        <button class="more-btn" onclick="toggleDescription(4)">더보기</button>
+                        <!-- 전체 설명 (처음에는 숨김) -->
+                        <div class="product-full" id="product-full-4" style="display: none;">
+                            <p>브랜드 이름, 슬로건, 약속, 페르소나등 브랜드전략의 기초를 만들어드립니다.</p>
+                            <p><strong>포함 서비스:</strong></p>
+                            <ul>
+                                <li>브랜드 이름 대안 3가지 제시</li>
+                                <li>고객 페르소나 정의</li>
+                                <li>슬로건, 핵심 메시지, 브랜드 스토리 개발</li>
+                            </ul>
+                            <p><strong>기간:</strong> 약 1개월 소요</p>
+                            <p><strong>가격:</strong> 500만원 (중간계 기존 수강생은 30% 할인)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 고객 후기 섹션 시작 -->
+    <section class="review">
+        <!-- 고객 후기 컨테이너 -->
+        <div class="review-container">
+            <!-- 고객 후기 섹션 제목 -->
+            <h1 class="review-title">고객 후기</h1>
+            
+            <!-- 고객 후기 그리드 (3x2 형태) -->
+            <div class="review-grid">
+                <!-- 고객 후기 1 -->
+                <div class="review-item">
+                    <!-- 별점 표시 (5개 별) -->
+                    <div class="review-stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <!-- 후기 내용 -->
+                    <div class="review-content">
+                        <p>중간계AI 스튜디오에서 상세페이지를 제작받았는데 정말 만족합니다.</p>
+                        <p>매출이 30% 증가했고, 고객 문의도 많이 늘었어요.</p>
+                        <p>AI 최적화 덕분에 검색 노출도 훨씬 좋아졌습니다!</p>
+                    </div>
+                    <!-- 고객 정보 -->
+                    <div class="review-author">
+                        <strong>김미영 사장님</strong>
+                        <span>(온라인 쇼핑몰 운영)</span>
+                    </div>
+                </div>
+                
+                <!-- 고객 후기 2 -->
+                <div class="review-item">
+                    <!-- 별점 표시 (5개 별) -->
+                    <div class="review-stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <!-- 후기 내용 -->
+                    <div class="review-content">
+                        <p>브랜드 네이밍 서비스를 이용했는데 정말 창의적이고 감각적이에요.</p>
+                        <p>고객들이 브랜드 이름을 기억하기 쉽다고 말해주셔서 뿌듯합니다.</p>
+                        <p>브랜드 스토리까지 완벽하게 만들어주셔서 감사해요!</p>
+                    </div>
+                    <!-- 고객 정보 -->
+                    <div class="review-author">
+                        <strong>박정수 사장님</strong>
+                        <span>(카페 창업)</span>
+                    </div>
+                </div>
+                
+                <!-- 고객 후기 3 -->
+                <div class="review-item">
+                    <!-- 별점 표시 (5개 별) -->
+                    <div class="review-stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <!-- 후기 내용 -->
+                    <div class="review-content">
+                        <p>AI 쇼츠 영상 제작 서비스가 정말 대박이에요!</p>
+                        <p>인스타그램 팔로워가 3배 늘었고, 매장 방문 고객도 증가했어요.</p>
+                        <p>젊은 고객들이 많이 찾아와서 매출 향상에 큰 도움이 됐습니다.</p>
+                    </div>
+                    <!-- 고객 정보 -->
+                    <div class="review-author">
+                        <strong>이현우 사장님</strong>
+                        <span>(치킨집 운영)</span>
+                    </div>
+                </div>
+                
+                <!-- 고객 후기 4 -->
+                <div class="review-item">
+                    <!-- 별점 표시 (5개 별) -->
+                    <div class="review-stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <!-- 후기 내용 -->
+                    <div class="review-content">
+                        <p>웹페이지 제작 서비스를 받았는데 정말 전문적이고 깔끔해요.</p>
+                        <p>예약 시스템도 완벽하게 구축해주셔서 업무 효율이 크게 향상됐어요.</p>
+                        <p>고객 관리도 쉬워져서 단골 고객들이 많이 늘었습니다!</p>
+                    </div>
+                    <!-- 고객 정보 -->
+                    <div class="review-author">
+                        <strong>최은지 사장님</strong>
+                        <span>(네일샵 운영)</span>
+                    </div>
+                </div>
+                
+                <!-- 고객 후기 5 -->
+                <div class="review-item">
+                    <!-- 별점 표시 (5개 별) -->
+                    <div class="review-stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <!-- 후기 내용 -->
+                    <div class="review-content">
+                        <p>처음에는 AI 서비스가 어려울 줄 알았는데 정말 쉽고 편해요.</p>
+                        <p>직원분들이 친절하게 설명해주시고, 결과물도 기대 이상이었어요.</p>
+                        <p>다른 사업자 분들께도 적극 추천하고 싶은 서비스입니다!</p>
+                    </div>
+                    <!-- 고객 정보 -->
+                    <div class="review-author">
+                        <strong>강민호 사장님</strong>
+                        <span>(꽃집 운영)</span>
+                    </div>
+                </div>
+                
+                <!-- 고객 후기 6 -->
+                <div class="review-item">
+                    <!-- 별점 표시 (5개 별) -->
+                    <div class="review-stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <!-- 후기 내용 -->
+                    <div class="review-content">
+                        <p>중간계AI 스튜디오 덕분에 온라인 사업이 성공할 수 있었어요.</p>
+                        <p>전문적인 컨설팅과 완벽한 결과물로 매출이 2배 증가했습니다.</p>
+                        <p>앞으로도 계속 함께 일하고 싶은 믿을 수 있는 파트너예요!</p>
+                    </div>
+                    <!-- 고객 정보 -->
+                    <div class="review-author">
+                        <strong>윤서연 사장님</strong>
+                        <span>(핸드메이드 액세서리)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CEO 인사말 섹션 시작 -->
+    <section class="ceo-message">
+        <!-- CEO 인사말 컨테이너 -->
+        <div class="ceo-container">
+            <!-- CEO 인사말 섹션 제목 -->
+            <h1 class="ceo-title">CEO 인사말</h1>
+            
+            <!-- CEO 인사말 내용 (좌우 배치) -->
+            <div class="ceo-content">
+                <!-- 좌측 CEO 사진 -->
+                <div class="ceo-image">
+                    <img src="images/man3.jpg" alt="중간계 AI 스튜디오 대표 신병철" class="ceo-img">
+                </div>
+                
+                <!-- 우측 인사말 텍스트 -->
+                <div class="ceo-text">
+                    <!-- 처음에 보이는 4줄 요약 -->
+                    <div class="ceo-summary">
+                        <p>소상공인과 자영업 사장님들의 성공, 그것이 저의 사명입니다.</p>
+                        <p>안녕하십니까? 저는 지난 35년간 비즈니스와 마케팅 한길을 걸으며,</p>
+                        <p>CJ, 배달의민족, 러쉬, 여기어때, 야나두, 일동제약, 커피에 반하다,</p>
+                        <p>단꿈아이 등 수많은 기업과 브랜드에서 경영 자문과 마케팅 전략을 맡아 왔습니다.</p>
+                    </div>
+                    
+                    <!-- 더보기 버튼 -->
+                    <button class="ceo-more-btn" onclick="toggleCeoMessage()">더보기</button>
+                    
+                    <!-- 전체 인사말 (처음에는 숨김) -->
+                    <div class="ceo-full" id="ceo-full-message" style="display: none;">
+                        <p>소상공인과 자영업 사장님들의 성공, 그것이 저의 사명입니다.</p>
+                        <p>안녕하십니까? 저는 지난 35년간 비즈니스와 마케팅 한길을 걸으며, CJ, 배달의민족, 러쉬, 여기어때, 야나두, 일동제약, 커피에 반하다, 단꿈아이 등 수많은 기업과 브랜드에서 경영 자문과 마케팅 전략을 맡아 왔습니다.</p>
+                        <p>특히, 스타트업과 소상공인 사장님들의 빠르고 정확한 의사결정, 현장에 맞는 전략 실행을 지원하며, 현장에서 길어 올린 실전 경험을 쌓아왔습니다.</p>
+                        <p>이제 AI 시대를 맞아, 그동안의 경험과 통찰을 바탕으로 '중간계 AI 스튜디오'라는 새로운 서비스를 시작합니다.</p>
+                        <p>브랜드 기획, Naming, 브랜드 스토리, 슬로건 부터 상세페이지, 쇼츠·릴스, 웹사이트, 그리고 인공지능 기반 챗봇에 이르기까지, 변화하는 시대에 꼭 필요한 실행 솔루션을 제공합니다.</p>
+                        <p>AI 기술과 현장 경험이 결합된 실용적이고 감각적인 지원, 그것이 중간계 AI 스튜디오가 드리는 약속입니다.</p>
+                        <p>소상공인과 자영업 사장님들의 더 큰 도전과 성공을 함께하겠습니다. 감사합니다.</p>
+                        <p class="ceo-signature"><strong>중간계 AI 스튜디오<br>대표 신병철</strong></p>
+                    </div>
+                    
+                    <!-- 닫기 버튼 (전체 메시지가 보일 때만 표시) -->
+                    <button class="ceo-close-btn" id="ceo-close-btn" onclick="toggleCeoMessage()" style="display: none;">닫기</button>
+                </div>
+            </div>
+            
+            <!-- 고객센터 연락처 -->
+            <div class="contact-info">
+                <p class="contact-message">상담이 필요하시면, 중간계 고객센터로 연락주십시오.</p>
+                <div class="contact-numbers">
+                    <a href="tel:02-6952-9454" class="contact-number">02-6952-9454</a>
+                    <span class="contact-separator">,</span>
+                    <a href="tel:02-6952-9455" class="contact-number">02-6952-9455</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <!-- 자바스크립트 파일 연결하기 -->
     <script src="script.js"></script>
 </body>

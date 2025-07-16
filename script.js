@@ -134,8 +134,43 @@ document.addEventListener('DOMContentLoaded', function() {
     window.previousSlide = previousSlide;
     window.currentSlide = currentSlide;
     
+    // 제품 설명 더보기/접기 기능
+    // 제품 설명을 펼치거나 접는 함수
+    function toggleDescription(productNumber) {
+        // 해당 제품의 전체 설명 요소 찾기
+        const productFull = document.getElementById('product-full-' + productNumber);
+        
+        // 해당 제품의 더보기 버튼 찾기
+        const moreBtn = productFull.previousElementSibling;
+        
+        // 현재 전체 설명이 보이는지 확인
+        const isVisible = productFull.style.display !== 'none';
+        
+        if (isVisible) {
+            // 전체 설명이 보이면 숨기기
+            productFull.style.display = 'none';
+            // 버튼 텍스트를 '더보기'로 변경
+            moreBtn.textContent = '더보기';
+            // 콘솔에 메시지 출력
+            console.log('제품 ' + productNumber + ' 설명을 접었습니다.');
+        } else {
+            // 전체 설명이 숨겨져 있으면 보이기
+            productFull.style.display = 'block';
+            // 버튼 텍스트를 '접기'로 변경
+            moreBtn.textContent = '접기';
+            // 콘솔에 메시지 출력
+            console.log('제품 ' + productNumber + ' 설명을 펼쳤습니다.');
+        }
+    }
+    
+    // 전역 함수로 만들어서 HTML에서 onclick으로 사용할 수 있게 하기
+    window.toggleDescription = toggleDescription;
+    
     // 콘솔에 초기화 완료 메시지 출력
     console.log('중간계AI 스튜디오 헤더가 성공적으로 로드되었습니다!');
     console.log('히어로 캐러셀이 성공적으로 초기화되었습니다!');
     console.log('총 ' + totalSlides + '개의 슬라이드가 준비되었습니다.');
+    console.log('제품 섹션 더보기/접기 기능이 준비되었습니다!');
+    console.log('고객 후기 섹션이 성공적으로 로드되었습니다!');
+    console.log('총 6개의 고객 후기가 준비되었습니다.');
 }); 
