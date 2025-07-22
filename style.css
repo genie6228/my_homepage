@@ -58,7 +58,7 @@ body {
 /* 브랜드 이름 스타일 */
 .brand-name {
     /* 글자 크기 */
-    font-size: 24px;
+    font-size: 27px;
     /* 글자 두께 */
     font-weight: 700;
     /* 글자 색상 */
@@ -84,7 +84,7 @@ body {
     /* 밑줄 제거 */
     text-decoration: none;
     /* 글자 크기 */
-    font-size: 16px;
+    font-size: 19px;
     /* 글자 두께 */
     font-weight: 500;
     /* 마우스 올렸을 때 손가락 모양 */
@@ -110,7 +110,7 @@ body {
     /* 글자 색상 */
     color: #333;
     /* 글자 크기 */
-    font-size: 16px;
+    font-size: 19px;
     /* 글자 두께 */
     font-weight: 500;
     /* 버튼 안쪽 여백 */
